@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<br>
+<div class="container" align="center">
+
+
+    <h3>Please Select The Category For Registration</h3>
+
+        <select id="list1" onchange="myfunc()">
+            <option value="Select">Select</option>
+                  <option value="student">Student</option>
+                  <option value="jobseeker">JobSeeker</option>
+                  <option value="company">Company</option>
+                  <option value="college">College</option>
+        </select>
+
+
+
+</div>
+
+
+<br>
+<div class="container" align="center" id="student">
+ <form method="post">
+     {%csrf_token%}
+     {{form.as_p}}
+
+     <button class="btn btn-success" type ="submit">Submit</button>
+
+
+     <br>
+     <br>
+     <h3>Already registered </h3>
+     <a type="button" class="btn btn-info" href="{%url 'login'%}">Click Here For LoginS</a>
+
+
+ </form>
+</div>
+<div class="container" align="center" id="jobseeker">
+ <form method="post">
+     {%csrf_token%}
+     {{form.as_p}}
+
+     <button class="btn btn-success" type ="submit">Submit</button>
+
+
+     <br>
+     <br>
+     <h3>Already registered </h3>
+     <a type="button" class="btn btn-info" href="{%url 'login'%}">Click Here For LoginS</a>
+
+
+ </form>
+</div>
+<div class="container" align="center" id="company">
+ <form method="post">
+     {%csrf_token%}
+     {{form.as_p}}
+
+     <button class="btn btn-success" type ="submit">Submit</button>
+
+
+     <br>
+     <br>
+     <h3>Already registered </h3>
+     <a type="button" class="btn btn-info" href="{%url 'login'%}">Click Here For LoginS</a>
+
+
+ </form>
+</div>
+<div class="container" align="center" id="college">
+ <form method="post">
+     {%csrf_token%}
+     {{form.as_p}}
+
+     <button class="btn btn-success" type ="submit">Submit</button>
+
+
+     <br>
+     <br>
+     <h3>Already registered </h3>
+     <a type="button" class="btn btn-info" href="{%url 'login'%}">Click Here For LoginS</a>
+
+
+ </form>
+</div>
+<script>
+
+    $(document).ready(function(){
+
+
+                        $("#student").hide();
+                        $("#jobseeker").hide();
+                        $("#company").hide();
+                        $("#college").hide();
+
+
+            });
+
+
+</script>
+
+<script>
+function myfunc(){
+
+            var val1=document.getElementById("list1").value;
+            if(val1==="student"){
+
+                        $('#jobseeker').hide();
+                        $('#company').hide();
+                        $('#college').hide();
+
+                        $('#student').show();
+
+
+                    }
+                     if(val1==="jobseeker"){
+
+                        $('#jobseeker').show();
+                        $('#company').hide();
+                        $('#college').hide();
+
+                        $('#student').hide();
+
+
+                    }
+                     if(val1==="company"){
+
+                        $('#jobseeker').hide();
+                        $('#company').show();
+                        $('#college').hide();
+
+                        $('#student').hide();
+
+
+                    }
+                     if(val1==="college"){
+
+                        $('#jobseeker').hide();
+                        $('#company').hide();
+                        $('#college').show();
+
+                        $('#student').hide();
+
+
+                    }
+
+
+}
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

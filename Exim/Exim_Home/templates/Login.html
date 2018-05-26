@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class ="container" align="center">
+
+
+    <form method = "POST">
+        {%csrf_token%}
+        <label for="username">Username
+
+        <input type ="text" name="username">
+            </label>
+        <br>
+        <br>
+        <label for="password">Password
+
+        <input type ="password" name="password">
+            </label>
+        <br>
+        <br>
+
+
+        <button class="btn btn-success" type="submit">Login</button>
+        <br>
+        <br>
+
+
+        <a class="btn btn-info" type="button" href="{%url 'home'%}">Click here for Register</a>
+
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

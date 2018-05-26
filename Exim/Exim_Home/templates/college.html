@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<br>
+<br>
+
+<div class="container" align="center" >
+
+    <form method="post">
+     {%csrf_token%}
+
+
+     {{form.as_p}}
+
+
+     <button class="btn btn-success" type ="submit">Submit</button>
+
+
+     <br>
+     <br>
+     <p>Already registered ?</p>
+     <a type="button" class="btn btn-info" href="{%url 'login'%}">Click Here For Login</a>
+
+
+ </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
